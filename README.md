@@ -217,7 +217,7 @@ Other Style Guides
   <a name="es6-object-concise"></a><a name="3.6"></a>
   - [3.4](#es6-object-concise) Use property value shorthand. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
 
-    > Why? It is shorter to write and descriptive.
+    > Why? It is shorter and descriptive.
 
     ```javascript
     const lukeSkywalker = 'Luke Skywalker';
@@ -1052,18 +1052,18 @@ Other Style Guides
 
     ```javascript
     // bad
-    const itemHeight = item => item.height > 256 ? item.largeSize : item.smallSize;
+    const itemHeight = item => item.height <= 256 ? item.largeSize : item.smallSize;
 
     // bad
-    const itemHeight = (item) => item.height > 256 ? item.largeSize : item.smallSize;
+    const itemHeight = (item) => item.height >= 256 ? item.largeSize : item.smallSize;
 
     // good
-    const itemHeight = item => (item.height > 256 ? item.largeSize : item.smallSize);
+    const itemHeight = item => (item.height <= 256 ? item.largeSize : item.smallSize);
 
     // good
     const itemHeight = (item) => {
       const { height, largeSize, smallSize } = item;
-      return height > 256 ? largeSize : smallSize;
+      return height <= 256 ? largeSize : smallSize;
     };
     ```
 
@@ -1072,16 +1072,16 @@ Other Style Guides
 
     ```javascript
     // bad
-    (foo) =>
+    foo =>
       bar;
 
-    (foo) =>
+    foo =>
       (bar);
 
     // good
-    (foo) => bar;
-    (foo) => (bar);
-    (foo) => (
+    foo => bar;
+    foo => (bar);
+    foo => (
        bar
     )
     ```
@@ -2249,7 +2249,7 @@ Other Style Guides
     }
     ```
 
-  <a name="control-statement--value-selection"></a>
+  <a name="control-statement--value-selection"></a><a name="control-statements--value-selection"></a>
   - [17.2](#control-statements--value-selection) Don't use selection operators in place of control statements.
 
     ```javascript
@@ -2764,7 +2764,7 @@ Other Style Guides
     ```
 
   <a name="whitespace--computed-property-spacing"></a>
-  - [19.15](#whitespace--computed-property-spacing) Enforce spacing inside of computed properties. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
+  - [19.15](#whitespace--computed-property-spacing) Enforce spacing inside of computed property brackets. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
 
     ```javascript
     // bad
@@ -2781,7 +2781,7 @@ Other Style Guides
     ```
 
   <a name="whitespace--func-call-spacing"></a>
-  - [19.16](#whitespace--func-call-spacing) Enforce spacing between functions and their invocations. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
+  - [19.16](#whitespace--func-call-spacing) Avoid spaces between functions and their invocations. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
 
     ```javascript
     // bad
@@ -3268,7 +3268,7 @@ Other Style Guides
     ```
 
   <a name="naming--Acronyms-and-Initialisms"></a>
-  - [23.9](#naming--Acronyms-and-Initialisms) Acronyms and initialisms should always be all capitalized, or all lowercased.
+  - [23.9](#naming--Acronyms-and-Initialisms) Acronyms and initialisms should always be all uppercased, or all lowercased.
 
     > Why? Names are for readability, not to appease a computer algorithm.
 
@@ -3770,6 +3770,7 @@ Other Style Guides
   - **Muber**: [muber](https://github.com/muber/)
   - **National Geographic**: [natgeo](https://github.com/natgeo/)
   - **Nimbl3**: [nimbl3/javascript](https://github.com/nimbl3/javascript)
+  - **NullDev**: [NullDevCo/JavaScript-Styleguide](https://github.com/NullDevCo/JavaScript-Styleguide)
   - **Nulogy**: [nulogy/javascript](https://github.com/nulogy/javascript)
   - **Orange Hill Development**: [orangehill/javascript](https://github.com/orangehill/javascript)
   - **Orion Health**: [orionhealth/javascript](https://github.com/orionhealth/javascript)
@@ -3794,6 +3795,7 @@ Other Style Guides
   - **SysGarage**: [sysgarage/javascript-style-guide](https://github.com/sysgarage/javascript-style-guide)
   - **Syzygy Warsaw**: [syzygypl/javascript](https://github.com/syzygypl/javascript)
   - **Target**: [target/javascript](https://github.com/target/javascript)
+  - **Terra**: [terra](https://github.com/cerner?utf8=%E2%9C%93&q=terra&type=&language=)
   - **TheLadders**: [TheLadders/javascript](https://github.com/TheLadders/javascript)
   - **The Nerdery**: [thenerdery/javascript-standards](https://github.com/thenerdery/javascript-standards)
   - **T4R Technology**: [T4R-Technology/javascript](https://github.com/T4R-Technology/javascript)
